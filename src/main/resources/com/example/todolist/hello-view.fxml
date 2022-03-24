@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane
+        id="AnchorPane"
+        maxHeight="-Infinity" maxWidth="-Infinity"
+        minHeight="-Infinity" minWidth="-Infinity"
+        prefHeight="449.0" prefWidth="779.0"
+        xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.example.todolist.Controller">
+    <children>
+        <TableView fx:id="tableTasks" layoutX="12.0" layoutY="62.0" prefHeight="324.0" prefWidth="600.0">
+            <columns>
+                <!-- Колонки таблицы -->
+                <TableColumn fx:id="idColumn" text="Номер задачи" />
+                <TableColumn fx:id="titleColumn" prefWidth="150.0" text="Заголовок" />
+                <TableColumn fx:id="descColumn" prefWidth="250.0" text="Описание" />
+                <TableColumn fx:id="startColumn" prefWidth="100.0" text="Начало" />
+                <TableColumn fx:id="dueColumn" prefWidth="100.0" text="Конец" />
+            </columns>
+        </TableView>
+        <Label layoutX="14.0" layoutY="18.0" text="Список всех задач:">
+            <font>
+                <Font name="Verdana" size="24.0" />
+            </font>
+        </Label>
+      <Button fx:id="btn_edit" layoutX="631.0" layoutY="62.0" mnemonicParsing="false" onAction="#openEditWindow" prefHeight="25.0" prefWidth="124.0" text="Добавить" />
+      <Button fx:id="btn_del" layoutX="631.0" layoutY="109.0" mnemonicParsing="false" onAction="#openDelWindow" prefHeight="25.0" prefWidth="124.0" text="Удалить" />
+      <Button fx:id="btn_change" layoutX="631.0" layoutY="157.0" mnemonicParsing="false" onAction="#openGetIdWindow" prefHeight="25.0" prefWidth="124.0" text="Изменить" />
+    </children>
+</AnchorPane>
