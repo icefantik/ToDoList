@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="ChangeWindow" prefHeight="150.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todolist.EditWindow">
+   <children>
+      <!--<Label contentDisplay="RIGHT" layoutX="14.0" layoutY="14.0" text="Id">
+         <graphic>
+            <TextField fx:id="textFieldId"/>
+         </graphic></Label>-->
+      <Label contentDisplay="RIGHT" layoutX="2.0" layoutY="13.0" text="Title" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="13.0">
+         <graphic>
+            <TextField fx:id="textFieldTitle" />
+         </graphic></Label>
+      <Label contentDisplay="RIGHT" layoutX="188.0" layoutY="13.0" text="Desc" AnchorPane.leftAnchor="188.0" AnchorPane.topAnchor="13.0">
+         <graphic>
+            <TextField fx:id="textFieldDesc" />
+         </graphic></Label>
+      <Label contentDisplay="RIGHT" text="Start" AnchorPane.topAnchor="50.0">
+         <graphic>
+            <TextField fx:id="textFieldStart" />
+         </graphic>
+      </Label>
+      <Label contentDisplay="RIGHT" text="Due" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="50.0">
+         <graphic>
+            <TextField fx:id="textFieldDue" />
+         </graphic>
+      </Label>
+      <Button layoutX="294.0" layoutY="85.0" mnemonicParsing="false" onAction="#changeElem" text="Изменить" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="85.0" />
+   </children>
+</AnchorPane>

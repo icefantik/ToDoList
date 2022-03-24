@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.todolist.AddWindow"
+            prefHeight="150.0" prefWidth="570.0">
+    <children>
+        <Label contentDisplay="RIGHT" layoutX="14.0" layoutY="14.0" text="Id">
+            <graphic>
+                <TextField fx:id="textFieldId"/>
+            </graphic></Label>
+        <Label contentDisplay="RIGHT" text="Title" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="13.0">
+            <graphic>
+                <TextField fx:id="textFieldTitle"/>
+            </graphic></Label>
+        <Label contentDisplay="RIGHT" text="Desc" AnchorPane.leftAnchor="380.0" AnchorPane.topAnchor="13.0">
+            <graphic>
+                <TextField fx:id="textFieldDesc"/>
+            </graphic></Label>
+        <Label contentDisplay="RIGHT" text="Start" AnchorPane.topAnchor="50.0">
+            <graphic>
+                <TextField fx:id="textFieldStart"/>
+            </graphic>
+        </Label>
+        <Label contentDisplay="RIGHT" text="Due" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="50.0">
+            <graphic>
+                <TextField fx:id="textFieldDue"/>
+            </graphic>
+        </Label>
+        <Button mnemonicParsing="false" text="Добавить" onAction="#EditTask" AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="50.0" />
+    </children>
+</AnchorPane>
