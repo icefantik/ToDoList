@@ -26,25 +26,16 @@ public class GetIdWindow implements Initializable {
         Parent fxmlLoader = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GetIdWindow.fxml")));
         Scene scene = new Scene(fxmlLoader);
         Stage primaryStage = new Stage();
-        primaryStage.setTitle("Id для изменения");
+        primaryStage.setTitle("Номер задачи для изменения");
         primaryStage.setScene(scene);
         primaryStage.initModality(Modality.NONE);
         primaryStage.show();
     }
-    /*
-    public static int getEditId() {
-
-        return 0;
-    }
-
-    public void getText() {
-        //setText(Controller.getIndex(getEditId()));
-    }
-    */
     public void openChangeWindow(ActionEvent actionEvent) throws IOException {
         idChange = Integer.parseInt(getIDChange.getText());
         EditWindow editWindow = new EditWindow();
         if (Controller.findOnIdElem(idChange) != null)
             editWindow.newWindow();
+        getIDChange.clear();
     }
 }
