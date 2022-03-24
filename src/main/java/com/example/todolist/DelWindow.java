@@ -33,5 +33,6 @@ public class DelWindow implements Initializable {
     }
     public void findDelId() {
         Controller.delId(Integer.parseInt(textFieldDelId.getText()));
+        textFieldDelId.clear();
     }
 }

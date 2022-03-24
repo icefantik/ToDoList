@@ -9,30 +9,30 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.todolist.AddWindow"
-            prefHeight="150.0" prefWidth="570.0">
+            prefHeight="150.0" prefWidth="650.0">
     <children>
-        <Label contentDisplay="RIGHT" layoutX="14.0" layoutY="14.0" text="Id">
+        <Label contentDisplay="RIGHT" layoutX="5.0" layoutY="14.0" text="Номер задачи">
             <graphic>
                 <TextField fx:id="textFieldId"/>
             </graphic></Label>
-        <Label contentDisplay="RIGHT" text="Title" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="13.0">
+        <Label contentDisplay="RIGHT" text="Заголовок" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="13.0">
             <graphic>
                 <TextField fx:id="textFieldTitle"/>
             </graphic></Label>
-        <Label contentDisplay="RIGHT" text="Desc" AnchorPane.leftAnchor="380.0" AnchorPane.topAnchor="13.0">
+        <Label contentDisplay="RIGHT" text="Описание" AnchorPane.leftAnchor="455.0" AnchorPane.topAnchor="13.0">
             <graphic>
                 <TextField fx:id="textFieldDesc"/>
             </graphic></Label>
-        <Label contentDisplay="RIGHT" text="Start" AnchorPane.topAnchor="50.0">
+        <Label contentDisplay="RIGHT" text="Начало" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="50.0">
             <graphic>
                 <TextField fx:id="textFieldStart"/>
             </graphic>
         </Label>
-        <Label contentDisplay="RIGHT" text="Due" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="50.0">
+        <Label contentDisplay="RIGHT" text="Конец" AnchorPane.leftAnchor="261.0" AnchorPane.topAnchor="50.0">
             <graphic>
                 <TextField fx:id="textFieldDue"/>
             </graphic>
         </Label>
-        <Button mnemonicParsing="false" text="Добавить" onAction="#EditTask" AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="50.0" />
+        <Button mnemonicParsing="false" text="Добавить" onAction="#EditTask" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="50.0" />
     </children>
 </AnchorPane>

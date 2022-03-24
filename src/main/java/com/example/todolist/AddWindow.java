@@ -41,6 +41,16 @@ public class AddWindow implements Initializable {
     public void getTextField() {
         Task task = new Task(Integer.parseInt(textFieldId.getText()), textFieldTitle.getText(), textFieldDesc.getText(), textFieldStart.getText(), textFieldDue.getText());
         Controller.addTasksData(task);
+        clearTextField();
+    }
+
+    private void clearTextField()
+    {
+        textFieldId.clear();
+        textFieldTitle.clear();
+        textFieldDesc.clear();
+        textFieldStart.clear();
+        textFieldDue.clear();
     }
 
     public void EditTask(ActionEvent actionEvent) {
