@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
 import static com.example.todolist.Controller.addTasksData;
 import static com.example.todolist.Controller.delTasksData;
 
+// Класс для работы с окном изменения записи
 public class EditWindow implements Initializable {
     @FXML
     public TextField textFieldTitle;
@@ -33,6 +34,7 @@ public class EditWindow implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // этот метод инициализирует значения
         task = Controller.findOnIdElem(GetIdWindow.idChange);
         assert task != null;
         textFieldTitle.setText(task.title);
@@ -42,6 +44,7 @@ public class EditWindow implements Initializable {
     }
 
     public void newWindow() throws IOException {
+        // метод создание окна
         Parent fxmlLoader = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EditWindow.fxml")));
         Scene scene = new Scene(fxmlLoader);
         primaryStage = new Stage();
@@ -53,6 +56,7 @@ public class EditWindow implements Initializable {
     }
 
     public void changeElem(ActionEvent actionEvent) {
+        // метод изменение записи
         Task changeTask = getText();
         Controller.delId(GetIdWindow.idChange);
         addTasksData(changeTask);
@@ -60,6 +64,7 @@ public class EditWindow implements Initializable {
     }
 
     private Task getText() {
+        // метод получения записи
         return new Task(GetIdWindow.idChange, textFieldTitle.getText(), textFieldDesc.getText(), textFieldStart.getText(), textFieldDue.getText());
     }
 }
