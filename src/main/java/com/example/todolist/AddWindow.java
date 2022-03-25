@@ -16,6 +16,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+// класс для работы с окном добавления записи
 public class AddWindow implements Initializable {
     public TextField textFieldId;
     public TextField textFieldTitle;
@@ -29,6 +30,7 @@ public class AddWindow implements Initializable {
     }
 
     public void newWindow() throws IOException {
+        // метод создания окна добавления записи
         Parent fxmlLoader = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddWindow.fxml")));
         Scene scene = new Scene(fxmlLoader);
         Stage primaryStage = new Stage();
@@ -39,6 +41,7 @@ public class AddWindow implements Initializable {
     }
 
     public void getTextField() {
+        // метод получения текста с полей ввода
         Task task = new Task(Integer.parseInt(textFieldId.getText()), textFieldTitle.getText(), textFieldDesc.getText(), textFieldStart.getText(), textFieldDue.getText());
         Controller.addTasksData(task);
         clearTextField();
