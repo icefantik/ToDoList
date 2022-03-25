@@ -1,5 +1,6 @@
 package com.example.todolist;
 
+// класс для работы с записью
 public class Task {
     public int id;
     public String title;
