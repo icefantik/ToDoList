@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+// класс для работы с окном получения id
 public class GetIdWindow implements Initializable {
     public TextField getIDChange;
     public static int idChange;
@@ -23,6 +24,7 @@ public class GetIdWindow implements Initializable {
 
     }
     public void newWindow() throws IOException {
+        // метод создания окна
         Parent fxmlLoader = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GetIdWindow.fxml")));
         Scene scene = new Scene(fxmlLoader);
         Stage primaryStage = new Stage();
@@ -32,6 +34,7 @@ public class GetIdWindow implements Initializable {
         primaryStage.show();
     }
     public void openChangeWindow(ActionEvent actionEvent) throws IOException {
+        // метод открытия окна удаления записи
         idChange = Integer.parseInt(getIDChange.getText());
         EditWindow editWindow = new EditWindow();
         if (Controller.findOnIdElem(idChange) != null)
