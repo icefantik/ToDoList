@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+// класс для работы с окном удаления
 public class DelWindow implements Initializable {
     public TextField textFieldDelId;
 
@@ -23,6 +24,7 @@ public class DelWindow implements Initializable {
 
     }
     public void newWindow() throws IOException {
+        // метод создания окна удаления
         Parent fxmlLoader = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("DelWindow.fxml")));
         Scene scene = new Scene(fxmlLoader);
         Stage primaryStage = new Stage();
